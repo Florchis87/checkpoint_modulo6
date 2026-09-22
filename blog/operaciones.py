@@ -1,28 +1,42 @@
-def listar_posts(lista):
-    for post in lista:
-        print("Título:", post["titulo"])
-        print("Autor:", post["autor"]["nombre"])
-        print("Estado:", post["estado"])
-        print("--------------------")
+from blog.modelos import Autor, Post
 
 
-def buscar_por_titulo(lista, termino):
-    resultados = []
+def crear_post(blog):
+    print("\n--- CREAR NUEVO POST ---")
 
-    for post in lista:
-        if termino.lower() in post["titulo"].lower():
-            resultados.append(post)
+    titulo = input("Título: ").strip()
+    contenido = input("Contenido: ").strip()
 
-    return resultados
+    if not titulo or not contenido:
+        print("El título y el contenido no pueden estar vacíos.")
+        return
 
+    nombre_autor = input("Nombre del autor: ").strip()
+    bio_autor = input("Bio del autor: ").strip()
+    especialidad = input("Especialidad del autor: ").strip()
 
-def filtrar_por_tag(lista, tag):
-    resultados = []
+    autor = Autor(
+        nombre_autor,
+        bio_autor,
+        especialidad
+    )
 
-    for post in lista:
-        for etiqueta in post["tags"]:
-            if etiqueta.lower() == tag.lower():
-                resultados.append(post)
-                break
+    tags_texto = input("Tags separados por coma: ")
+    tags = [tag.strip() for tag in tags_texto.split(",") if tag.strip()]
 
-    return resultados
+    estado = input("Estado (borrador/publicado/archivado): ").strip().lower()
+
+    nuevo_id = len(blog.posts) + 1
+
+    nuevo_post = Post(
+        nuevo_id,
+        titulo,
+        contenido,
+        autor,
+        tags,
+        estado
+    )
+
+    blog.agregar_post(nuevo_post)
+
+    print("¡Post creado correctamente!")
