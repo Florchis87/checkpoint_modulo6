@@ -1,64 +1,115 @@
-Blog de Jane Austen
+# Blog de Jane Austen
 
 ## Descripción
 
-Este proyecto es un sistema de blog por consola desarrollado en Python.
+Este proyecto consiste en un blog desarrollado en Python sobre Jane Austen.
 
-El programa permite listar posts, buscar posts por título, filtrar posts por tag y validar la información de los posts.
+En esta versión se realizó una refactorización del proyecto anterior utilizando Programación Orientada a Objetos (POO) y persistencia de datos mediante archivos JSON.
 
-El proyecto está organizado mediante módulos y paquetes para separar las responsabilidades y facilitar su lectura y mantenimiento.
+El programa permite gestionar posts desde la consola, buscarlos, filtrarlos, validarlos, crear nuevos posts y guardar la información para que permanezca disponible al volver a ejecutar el programa.
 
-## Cómo ejecutar el programa
+## Tecnologías utilizadas
 
-Para ejecutar el sistema, abrir la terminal desde la carpeta raíz del proyecto y escribir:
-
-```bash
-```
-python main.py
+- Python
+- Programación Orientada a Objetos (POO)
+- JSON
+- Visual Studio Code
 
 ## Estructura del proyecto
 
-blog_consola/
+```text
+BLOG_CONSOLA/
+│
+├── blog/
+│   ├── __init__.py
+│   ├── datos.py
+│   ├── menu.py
+│   ├── modelos.py
+│   ├── operaciones.py
+│   └── validaciones.py
 │
 ├── main.py
-├── README.md
-│
-└── blog/
-    ├── __init__.py
-    ├── datos.py
-    ├── menu.py
-    ├── operaciones.py
-    └── validaciones.py
+├── posts.json
+└── README.md
 
-## Responsabilidad de cada archivo
+Clases principales
+Autor
 
-main.py
-Es el archivo principal del programa. Coordina el funcionamiento del sistema, muestra el menú y llama a las funciones correspondientes.
+Representa al autor de los posts.
 
-blog/datos.py
-Contiene las estructuras de datos del blog, incluyendo la información de la autora, los estados, las etiquetas y los posts.
+Sus principales atributos son:
 
-blog/menu.py
-Contiene la función encargada de mostrar el menú y recibir la opción elegida por el usuario.
+nombre
+bio
+especialidad
+redes_sociales
 
-blog/operaciones.py
-Contiene las funciones para listar posts, buscar por título y filtrar por tag.
+También permite convertir el objeto a diccionario y reconstruirlo desde un diccionario.
 
-blog/validaciones.py
-Contiene las reglas utilizadas para comprobar que los posts tengan una estructura válida.
+Post
 
-blog/init.py
-Permite organizar la carpeta blog como un paquete de Python.
+Representa una publicación del blog.
 
-## Funcionalidades
-El sistema cuenta con las siguientes opciones:
+Sus atributos son:
 
-Ver todos los posts.
-Buscar por título.
-Filtrar por tag.
-Validar posts.
-Salir del programa.
-Autora
+id
+titulo
+contenido
+autor
+tags
+estado
 
-Los posts utilizados en este proyecto están relacionados con la escritora Jane Austen.
+El atributo autor utiliza un objeto de la clase Autor.
 
+Blog
+
+Es la clase principal encargada de gestionar los posts.
+
+Permite:
+
+listar posts
+buscar posts por título
+filtrar posts por tag
+agregar nuevos posts
+obtener los posts
+validar los posts
+Persistencia de datos
+
+Los datos se almacenan en el archivo posts.json.
+
+El archivo permite guardar la información de los posts para que no se pierda cuando se cierra el programa.
+
+El proyecto utiliza métodos de conversión entre objetos y diccionarios para poder trabajar con JSON:
+
+to_dict() convierte objetos en diccionarios.
+from_dict() convierte diccionarios en objetos.
+Funcionalidades
+
+El programa cuenta con un menú de consola con las siguientes opciones:
+
+Ver todos los posts
+Buscar por título
+Filtrar por tag
+Crear nuevo post
+Validar posts
+Guardar posts en JSON
+Salir
+Manejo de errores
+
+El programa contempla diferentes situaciones, como:
+
+archivo JSON inexistente
+archivo JSON vacío
+JSON inválido
+campos obligatorios vacíos
+estado de post no válido
+tipos de datos incorrectos
+Cómo ejecutar el proyecto
+Abrir la carpeta del proyecto en Visual Studio Code.
+Abrir una terminal.
+Ejecutar:
+python main.py
+Utilizar el menú de opciones para interactuar con el blog.
+Autor
+
+Proyecto realizado como parte de la cursada de Python.

@@ -1,0 +1,81 @@
+[
+    {
+        "id": 1,
+        "titulo": "Orgullo y prejuicio",
+        "contenido": "Una historia sobre el amor, el matrimonio y las diferencias sociales.",
+        "autor": {
+            "nombre": "Jane Austen",
+            "bio": "(1775-1817) fue una destacada novelista británica de la época georgiana, célebre por su ironía, su agudo ingenio y su minucioso análisis social de la aristocracia rural terrateniente.",
+            "especialidad": "Novelas románticas",
+            "redes_sociales": [
+                "@janeausten",
+                "linkedin.com/in/janeausten"
+            ]
+        },
+        "tags": [
+            "Romance",
+            "Sociedad",
+            "Matrimonio",
+            "Inglaterra"
+        ],
+        "estado": "publicado"
+    },
+    {
+        "id": 2,
+        "titulo": "Sentido y sensibilidad",
+        "contenido": "Una historia sobre dos hermanas que enfrentan el amor, las emociones y los cambios familiares.",
+        "autor": {
+            "nombre": "Jane Austen",
+            "bio": "(1775-1817) fue una destacada novelista británica de la época georgiana, célebre por su ironía, su agudo ingenio y su minucioso análisis social de la aristocracia rural terrateniente.",
+            "especialidad": "Novelas románticas",
+            "redes_sociales": [
+                "@janeausten",
+                "linkedin.com/in/janeausten"
+            ]
+        },
+        "tags": [
+            "Romance",
+            "Familia",
+            "Emociones",
+            "Sociedad"
+        ],
+        "estado": "borrador"
+    },
+    {
+        "id": 3,
+        "titulo": "Emma",
+        "contenido": "Una historia sobre amistad, amor y las situaciones creadas por las decisiones de Emma.",
+        "autor": {
+            "nombre": "Jane Austen",
+            "bio": "(1775-1817) fue una destacada novelista británica de la época georgiana, célebre por su ironía, su agudo ingenio y su minucioso análisis social de la aristocracia rural terrateniente.",
+            "especialidad": "Novelas románticas",
+            "redes_sociales": [
+                "@janeausten",
+                "linkedin.com/in/janeausten"
+            ]
+        },
+        "tags": [
+            "Romance",
+            "Comedia",
+            "Amistad",
+            "Sociedad"
+        ],
+        "estado": "archivado"
+    },
+    {
+        "id": 4,
+        "titulo": "Mansfield Park",
+        "contenido": "Una historia sobre una joven y su vida familiar.",
+        "autor": {
+            "nombre": "Jane Austen",
+            "bio": "Novelista británica.",
+            "especialidad": "Novelas románticas",
+            "redes_sociales": []
+        },
+        "tags": [
+            "Romance",
+            "Familia"
+        ],
+        "estado": "borrador"
+    }
+]
